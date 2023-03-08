@@ -24,7 +24,7 @@ function App() {
 
   useEffect(() => {
     fetchTasks();
-  }, []);
+  }, [posts]);
 
   const deleteTaskById = async (id) => {
     await axios.delete(`https://demodemo-uiwg-git-main-mehmetaltugakgul.vercel.app/posts/${id}`);
