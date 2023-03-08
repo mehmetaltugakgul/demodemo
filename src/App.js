@@ -12,7 +12,7 @@ function App() {
       taskDesc,
     });
     console.log(response);
-    const createdTasks = [...tasks, response.data];
+    const createdTasks = [...posts, response.data];
 
     setTasks(createdTasks);
   };
