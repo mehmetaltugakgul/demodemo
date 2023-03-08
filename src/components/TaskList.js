@@ -1,9 +1,9 @@
 import TaskShow from "./TaskShow";
 
-function TaskList({ tasks, onDelete, onUpdate }) {
+function TaskList({ posts, onDelete, onUpdate }) {
   return (
     <div className="taskList">
-      {tasks.map((task, index) => {
+      {posts.map((task, index) => {
         return (
           <TaskShow
             key={index}
