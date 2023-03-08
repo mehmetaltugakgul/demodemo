@@ -7,7 +7,7 @@ import axios from "axios";
 function App() {
   const [tasks, setTasks] = useState([]);
   const createTask = async (title, taskDesc) => {
-    const response = await axios.post("https://cakmajira4.netlify.app/tasks", {
+    const response = await axios.post("https://demodemo-uiwg-git-main-mehmetaltugakgul.vercel.app/posts", {
       title,
       taskDesc,
     });
@@ -18,7 +18,7 @@ function App() {
   };
 
   const fetchTasks = async () => {
-    const response = await axios.get("https://cakmajira4.netlify.app/tasks");
+    const response = await axios.get("https://demodemo-uiwg-git-main-mehmetaltugakgul.vercel.app/posts");
     setTasks(response.data);
   };
 
@@ -27,7 +27,7 @@ function App() {
   }, []);
 
   const deleteTaskById = async (id) => {
-    await axios.delete(`https://cakmajira4.netlify.app/tasks/${id}`);
+    await axios.delete(`https://demodemo-uiwg-git-main-mehmetaltugakgul.vercel.app/posts/${id}`);
     const afterDeletedTask = tasks.filter((task) => {
       return task.id !== id;
     });
@@ -35,7 +35,7 @@ function App() {
   };
 
   const updateTaskById = async (id, updatedTitle, updatedTaskDesc) => {
-    await axios.put(`https://cakmajira4.netlify.app/tasks/${id}`, {
+    await axios.put(`https://demodemo-uiwg-git-main-mehmetaltugakgul.vercel.app/posts/${id}`, {
       title: updatedTitle,
       taskDesc: updatedTaskDesc,
     });
