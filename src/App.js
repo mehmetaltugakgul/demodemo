@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 function App() {
-  const [tasks, setTasks] = useState([]);
+  const [posts, setTasks] = useState([]);
   const createTask = async (title, taskDesc) => {
     const response = await axios.post("https://demodemo-uiwg-git-main-mehmetaltugakgul.vercel.app/posts", {
       title,
@@ -28,7 +28,7 @@ function App() {
 
   const deleteTaskById = async (id) => {
     await axios.delete(`https://demodemo-uiwg-git-main-mehmetaltugakgul.vercel.app/posts/${id}`);
-    const afterDeletedTask = tasks.filter((post) => {
+    const afterDeletedTask = posts.filter((post) => {
       return post.id !== id;
     });
     setTasks(afterDeletedTask);
@@ -39,7 +39,7 @@ function App() {
       title: updatedTitle,
       taskDesc: updatedTaskDesc,
     });
-    const updatedTasks = tasks.map((post) => {
+    const updatedTasks = posts.map((post) => {
       if (post.id === id) {
         return { id, title: updatedTitle, taskDesc: updatedTaskDesc };
       }
