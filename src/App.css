@@ -1,0 +1,85 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+.addTask {
+  text-align: center;
+  width: 300px;
+}
+
+.taskForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.taskForm label {
+  padding: 5px 0;
+}
+
+.taskForm input,
+.taskForm textarea {
+  margin-bottom: 5px;
+  padding: 5px;
+  color: #2ea3f2;
+}
+
+.taskForm button.create {
+  background-color: #7cc48a;
+  border: none;
+  color: #fff;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding: 10px;
+}
+
+.taskForm button.update {
+  background-color: #428bca;
+  border: none;
+  color: #fff;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding: 10px;
+}
+
+.taskList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.taskShow {
+  border: 1px solid rgba(0, 0, 0, 0);
+  width: 350px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  background-color: #031956;
+  color: #fff;
+  filter: drop-shadow(0px 0px 7px #031956);
+}
+
+.taskShow button.taskDelete {
+  background-color: #bf0f1e;
+  border: none;
+  color: #fff;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding: 10px;
+}
+
+.taskShow button.taskUpdate {
+  background-color: #f28705;
+  border: none;
+  color: #fff;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding: 10px;
+}
